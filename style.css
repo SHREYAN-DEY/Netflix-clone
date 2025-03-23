@@ -1,0 +1,511 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    background-size: max(1200px 100vw);
+    height: 90vh;
+    position: relative;
+}
+
+.main .cover-image-background {
+    position: absolute;
+    height: 93vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    z-index: -3;
+}
+
+.main .box {
+    height: 95vh;
+    width: 100%;
+    opacity: 0.7;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+}
+
+.navlogo img {
+    width: 10vw;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 63vw;
+    height: 70px;
+}
+
+.navlogo img {
+    width: 145px;
+    position: relative;
+    z-index: 10;
+    margin-top: 20px;
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+}
+
+.quote {
+    color: white;
+    height: 87%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    padding: 20px;
+}
+
+.quote span:nth-child(1) {
+    font-family: Netflix Sans, Segoe UI, sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    max-width: 40vw;
+    margin-bottom: 20px;
+}
+
+.quote span:nth-child(2) {
+    font-family: Netflix Sans, Segoe UI, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.quote span:nth-child(3) {
+    font-family: Netflix Sans, Segoe UI, sans-serif;
+    margin-top: 1rem;
+    font-size: 16px;
+    font-weight: 450;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 18px 0;
+}
+
+
+/* button */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    font-family: Netflix Sans, Segoe UI, sans-serif;
+    border: transparent;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.red-btn {
+    background-color: rgba(229, 9, 20, 1);
+    color: white;
+}
+
+.red-btn:hover{
+    background-color: rgba(229, 9, 20, 0.815);
+}
+
+.lang {
+    background: rgba(17, 17, 17, 0.829);
+    color: rgb(240, 240, 240);
+    border: 1px solid rgb(116, 116, 116);
+    font-size: 16px;
+    padding: 5px 10px;
+    font-weight: 500;
+    margin: 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.login {
+    font-size: 16px;
+    padding: 6px 10px;
+    font-weight: 500;
+    margin: 10px 5px;
+}
+
+
+/* input */
+.input-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.email-input {
+    background: rgba(17, 17, 17, 0.829);
+    width: 325px;
+    padding: 12px 10px;
+    padding-right: 50px;
+    border: 1px solid rgb(116, 116, 116);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: rgb(204, 204, 204);
+}
+
+.email-input::placeholder {
+    color: rgb(204, 204, 204);
+}
+
+.get-started-btn {
+    padding: 1.9vw;
+    font-size: 1.125rem;
+    padding: 10px 20px;
+    font-weight: 600;
+    display: flex;
+}
+
+.get-started-btn svg {
+    padding-left: 10px;
+}
+
+
+/* curved line between page */
+.parent-curve-container {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    position: relative;
+    height: 6.25rem;
+    z-index: 1;
+}
+
+.curve-cover-gradient {
+    box-sizing: border-box;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    border: solid .25rem transparent;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    border-bottom: none;
+    background: radial-gradient(50% 500% at 50% -420%,
+            rgba(64, 97, 231, 0.4) 80%,
+            rgba(0, 0, 0, 0.1) 100%), black;
+    background-clip: padding-box;
+    width: 150%;
+    left: -25%;
+}
+
+.curve-cover-gradient:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin-top: -.25rem;
+    border-radius: inherit;
+    background: linear-gradient(to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84%);
+}
+
+body {
+    background-color: black;
+}
+
+
+/* first section trending movies */
+
+.first-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    margin-top: 7rem;
+}
+
+.tranding-container {
+    max-width: 73vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.first-section span {
+    font-size: 35px;
+    color: white;
+    font-family: Netflix Sans, Segoe UI, sans-serif;
+    font-weight: 600;
+}
+
+.top-10-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 5vh;
+}
+
+.mv button {
+    border: 0px transparent;
+    outline: transparent;
+    background: transparent;
+}
+
+.banner img {
+    height: 240px;
+    width: 168px;
+    object-fit: cover;
+    position: relative;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+/* second section properties */
+
+.reasons {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reasons h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-family: Netflix Sans, Segoe UI, sans-serif;
+    color: white;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.reason-card {
+    background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+    border-radius: 16px;
+    padding: 20px;
+    position: relative;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+}
+
+.reason-card h3 {
+    font-size: 1.4rem;
+    margin: 0 0 12px 0;
+    font-weight: 600;
+    font-family: Netflix Sans, Segoe UI, sans-serif;
+    color: white;
+}
+
+.reason-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+    font-family: Netflix Sans, Segoe UI, sans-serif;
+}
+
+.icon {
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tv-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E046E6'%3E%3Cpath d='M20 3H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4v2h8v-2h4c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 14H4V5h16v12z'/%3E%3C/svg%3E");
+}
+
+.download-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E046E6'%3E%3Cpath d='M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z'/%3E%3C/svg%3E");
+}
+
+.watch-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E046E6'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z'/%3E%3C/svg%3E");
+}
+
+.kids-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E046E6'%3E%3Cpath d='M21 6h-7.59l3.29-3.29L16 2l-4 4-4-4-.71.71L10.59 6H3c-1.1 0-2 .89-2 2v12c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.11-.9-2-2-2zm0 14H3V8h18v12zM9 10v8l7-4z'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 1200px) {
+    .reasons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reason-card {
+        min-height: 200px;
+        padding: 16px;
+    }
+
+    .icon {
+        width: 48px;
+        height: 48px;
+        bottom: 16px;
+        right: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .reasons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .reason-card {
+        min-height: 160px;
+        padding: 16px;
+    }
+
+    .reason-card h3 {
+        font-size: 1.25rem;
+        margin: 0 0 8px 0;
+    }
+
+    .reason-card p {
+        font-size: 0.9rem;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+        bottom: 16px;
+        right: 16px;
+    }
+}
+
+.faq{
+    background-color: black;
+    color: white;
+    padding: 24px;
+    font-family: Netflix Sans, Segoe UI, sans-serif;
+}
+.faq h2{
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.faqbox{
+   display: flex;
+   background-color: rgb(45, 45, 45); 
+   padding: 25px 30px;
+   max-width: 60vw;
+   margin: 10px auto;
+   justify-content: space-between;
+   cursor: pointer;
+   font-size: 24px;
+   border-radius: 2px;
+}
+
+.faqbox:hover{
+    background-color: rgb(68, 67, 67);
+    transition: all .5s ease-out;
+}
+
+.topFooter{
+    color: white;
+    text-align: center;
+}
+
+.topFooter span{
+    font-family: Netflix Sans, Segoe UI, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email-input-2{
+    background: rgba(17, 17, 17, 0.829);
+    width: 395px;
+    padding: 18px 20px;
+    padding-right: 50px;
+    border: 1px solid rgb(116, 116, 116);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: rgb(204, 204, 204); 
+}
+
+.email-input-2::placeholder {
+    color: rgb(204, 204, 204);
+}
+
+.btn-footertop{
+    padding: 17px 20px;
+}
+ 
+
+footer {
+    max-width: 60vw;
+    color: white;
+    margin: 40px auto;
+}
+
+footer .contact-no{
+    font-family: Netflix Sans, Segoe UI, sans-serif;
+    padding: 20px 5px;
+}
+
+.footer{  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 14px;
+}
+
+footer .footer-items{
+   display: flex;
+   flex-direction: column;
+   gap: 23px; 
+}
+
+.footer-items a{
+    color: #b3b3b3;
+    font-family: Netflix Sans, Segoe UI, sans-serif;
+    font-size: 14px;
+}
+
+footer h4{
+    font-family: Netflix Sans, Segoe UI, sans-serif;
+    color: #b3b3b3;
+    margin-left: 5px;
+    margin-top: 20px;
+    font-weight: 450;
+}
+
+.lang:hover{
+   border-color: aliceblue; 
+}
+
+
